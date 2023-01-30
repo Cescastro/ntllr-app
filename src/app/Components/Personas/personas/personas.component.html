@@ -1,0 +1,17 @@
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let Persona of PersonaService.personas">
+        <th scope="row">{{Persona.personaID}}</th>
+        <td>{{Persona.nombre}}</td>
+        <td>{{Persona.apellido}}</td>
+      </tr>
+    </tbody>
+  </table>
