@@ -1,17 +1,61 @@
+<div class="info-personas">
+  <br/>
+  <h2>Datos de personas inscritas</h2>
+  <div>
+    <button type="button" class="btn btn-primary">
+      <i class="bi bi-person-fill-add"></i>
+      Crear nuevo usuario
+    </button>
+    
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button">Button</button>
+      </div>
+    </div>
+    
+  </div>
+  <div class="lista-personas">    
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Cédula</th>        
+            <th scope="col">Teléfono</th>
+            <th scope="col">Municipio</th>
+            <th scope="col">Valor de ahorro mensual</th>
+            <th scope="col">Fecha de inicio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let Persona of PersonaService.personas">
+            <th scope="row">{{Persona.personaID}}</th>
+            <td>{{Persona.nombre}}</td>
+            <td>{{Persona.apellido}}</td>
+            <td>1298074194</td>
+            <td>30244736473</td>
+            <td>Salgar</td>
+            <td>$300.000</td>
+            <td>28-12-2022</td>
+            <td> 
+              <button type="button" class="btn btn-warning btn-sm">
+                  <i class="bi bi-pencil-square"></i>
+              </button>
+            </td>        
+            <td> 
+              <button type="button" class="btn btn-danger btn-sm">
+                  <i class="bi bi-trash3"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>
+  <div>
 
-<table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Apellido</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let Persona of PersonaService.personas">
-        <th scope="row">{{Persona.personaID}}</th>
-        <td>{{Persona.nombre}}</td>
-        <td>{{Persona.apellido}}</td>
-      </tr>
-    </tbody>
-  </table>
+  </div>
+
+</div>
+
