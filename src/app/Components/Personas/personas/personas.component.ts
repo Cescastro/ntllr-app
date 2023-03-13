@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Persona } from 'src/app/Models/Persona';
+import { Persona,CreatePersonaDTO,UpdatePersonaDTO } from 'src/app/Models/Persona';
 import { PersonaServiceService } from '../../../Services/persona-service.service';
 
 @Component({
@@ -8,6 +8,17 @@ import { PersonaServiceService } from '../../../Services/persona-service.service
   styleUrls: ['./personas.component.css']
 })
 export class PersonasComponent implements OnInit {
+
+  fechaActual= new Date();
+
+  personaAEditar: UpdatePersonaDTO ={
+    Nombre: '',
+    Apellido: '',
+    Cedula: '',
+    Telefono: '',
+    Municipio:'',
+    ValorAhorroMensual: 0,
+  }
 
   constructor(
     public PersonaService: PersonaServiceService
@@ -19,6 +30,10 @@ export class PersonasComponent implements OnInit {
 
   getAllPersonas(){
     this.PersonaService.getAllPersonas();
+  }
+
+  CrearNuevoUsuario(){
+    
   }
 
 }
